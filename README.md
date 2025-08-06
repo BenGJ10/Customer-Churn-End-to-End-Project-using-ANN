@@ -18,7 +18,13 @@ This project demonstrates an end-to-end workflow for building a customer churn p
 
 2. **Modeling with ANN**:  
    - The processed data is used to train an Artificial Neural Network for binary classification (churn vs. no churn).
-   - The ANN is designed to capture complex, non-linear relationships in the data.
+   - Using the `Keras` library, the ANN is built with:
+     - Input layer
+     - Hidden layers with `ReLU` activation
+     - Output layer with `sigmoid` activation for binary classification
+   - The model is compiled with `binary_crossentropy` loss and `adam` optimizer.
+   - Early stopping is implemented to prevent overfitting by monitoring validation loss.
+   - Used `TensorBoard` for visualizing training metrics.
 
 3. **Evaluation and Deployment**:  
    - The model is evaluated on a hold-out test set.
